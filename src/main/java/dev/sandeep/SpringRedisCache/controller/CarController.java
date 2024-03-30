@@ -45,7 +45,8 @@ public class CarController {
     @CacheEvict(value = "car", key = "#car.id")
     @DeleteMapping("/car/{id}")
     public Car deleteCar(@PathVariable("id") int carId) {
-        //call service and delete for the given id
-        return null;
+        Car c = carService.getCar(carId);
+        carService.deleteCar(carId);
+        return c;
     }
 }

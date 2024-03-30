@@ -10,4 +10,6 @@ public interface CarService {
     Car getCar(int id);
     List<Car> getAllCars();
     Car saveCar(Car car);
+    void deleteCar(int id);
+    void deleteAll();
 }
